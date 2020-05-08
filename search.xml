@@ -67,7 +67,7 @@
   <entry>
     <title>tmux</title>
     <url>/2020/05/08/tmux/</url>
-    <content><![CDATA[<p>一款优秀的终端复用软件。当关闭终端后,再次打开时原终端里面的任务不会中断 ;处于异地的两人可以对同一会话进行操作，一方的操作另一方可以实时看到 ;单个屏幕的灵活布局；</p>
+    <content><![CDATA[<p>终端复用软件。当关闭终端后,再次打开时原终端里面的任务不会中断 ;处于异地的两人可以对同一会话进行操作，一方的操作另一方可以实时看到 ;单个屏幕的灵活布局；</p>
 <a id="more"></a>
 
 <h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><ol>
