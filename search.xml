@@ -1,21 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/05/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <title>tmux</title>
+    <url>/2020/05/08/tmux/</url>
+    <content><![CDATA[<p>一款优秀的终端复用软件。当关闭终端后,再次打开时原终端里面的任务不会中断 ;处于异地的两人可以对同一会话进行操作，一方的操作另一方可以实时看到 ;单个屏幕的灵活布局；</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><ol>
+<li><p>新建会话</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tmux new -s session1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>退出会话</p>
+<blockquote>
+<p>ctrl+b d</p>
+</blockquote>
+</li>
+<li><p>退出会话</p>
+<blockquote>
+<p>ctrl+b d</p>
+</blockquote>
+</li>
+<li><p>终端环境查看会话列表</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tmux ls</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>会话环境中查看会话列表</p>
+<blockquote>
+<p>ctrl+b s </p>
+</blockquote>
+</li>
+<li><p>从终端环境进入会话</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tmux a(attach) -t session1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>终端销毁会话</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tmux <span class="built_in">kill</span>-session -t session1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>会话环境销毁会话</p>
+<blockquote>
+<p>ctrl+b : 状态栏变黄色输入kill- session -t session1 回车</p>
+</blockquote>
+</li>
+<li><p>终端重命名会话</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tmux rename -t old_session_name new_session_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>会话环境重命名当前会话</p>
+<blockquote>
+<p>ctrl+b $     输入new_session_name</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="Window"><a href="#Window" class="headerlink" title="Window:"></a>Window:</h3><ol>
+<li><p>修改当前窗口名</p>
+<blockquote>
+<p>ctrl_b ,</p>
+</blockquote>
+</li>
+<li><p>创建window</p>
+<blockquote>
+<p>ctrl+b c</p>
+</blockquote>
+</li>
+<li><p>关闭window：ctrl+b &amp;</p>
+</li>
+<li><p>切换window</p>
+<ul>
+<li><p>ctrl+b p(previous) 切换到上一个window</p>
+</li>
+<li><p>ctrl+b n(next) 切换到下一个window</p>
+</li>
+<li><p>ctrl+b 0 切换到0号window</p>
+</li>
+<li><p>ctrl+b w 列出当前session所有window，通过上下键切换</p>
+</li>
+<li><p>ctrl+b l(L) 相邻的window切换</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Pane"><a href="#Pane" class="headerlink" title="Pane:"></a>Pane:</h3><ol>
+<li><p>垂直分屏</p>
+<blockquote>
+<p>ctrl+b % </p>
+</blockquote>
+</li>
+<li><p>水平分屏</p>
+<blockquote>
+<p>ctrl+b “ </p>
+</blockquote>
+</li>
+<li><p>关闭pane ctrl+b x 关闭当前使用中的pane</p>
+</li>
+<li><p>切换pane</p>
+<ul>
+<li><p>ctrl+b o 依次切换当前窗口下的各个pane</p>
+</li>
+<li><p>ctrl+b Up|Down|Left|Right 根据箭头方向切换到某一个pane</p>
+</li>
+<li><p>ctrl+b Space(空格) 对当前窗口下的所有pane重新排列</p>
+</li>
+<li><p>ctrl+b z 最大化当前pane，再按一次恢复</p>
+</li>
+</ul>
+</li>
+</ol>
 ]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>tmux</tag>
+      </tags>
   </entry>
 </search>
