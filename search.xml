@@ -3,7 +3,10 @@
   <entry>
     <title>pipenv</title>
     <url>/2020/05/08/pipenv/</url>
-    <content><![CDATA[<h3 id="安装pipenv"><a href="#安装pipenv" class="headerlink" title="安装pipenv"></a>安装pipenv</h3><blockquote>
+    <content><![CDATA[<p>Python项目环境与依赖管理工具</p>
+<a id="more"></a>
+
+<h3 id="安装pipenv"><a href="#安装pipenv" class="headerlink" title="安装pipenv"></a>安装pipenv</h3><blockquote>
 <p>pip3 install pipenv</p>
 </blockquote>
 <h3 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h3><ol>
@@ -54,6 +57,8 @@
 ]]></content>
       <categories>
         <category>python</category>
+        <category>工具</category>
+        <category>环境</category>
       </categories>
       <tags>
         <tag>pipenv</tag>
